@@ -1,5 +1,11 @@
 const courses = [
   {
+    id: 0,
+    name: "IT Training",
+    duration: "3 months",
+    image: "./images/img2.webp",
+  },
+  {
     id: 1,
     name: "Web Design Training",
     duration: "2.5 months",
@@ -65,4 +71,4 @@ courses.map((course) => {
   </div>`;
 });
 
-document.getElementById("courses1").innerHTML = htmlPrint
+document.getElementById("courses1").innerHTML = htmlPrint;
