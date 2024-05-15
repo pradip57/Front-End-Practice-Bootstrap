@@ -1,4 +1,4 @@
-let name1:string = "Pradip Sapkota"
+let name2:string = "Pradip Sapkota"
 
 
 type userRole = "admin"|"seller"|"staff"
@@ -12,7 +12,7 @@ interface userObject {
     status?:string //optional
 }
 
-const object:userObject = {
+const object1:userObject = {
     name:"Hari",
     email:"harikarki@gmail.com",
     address:"Sitapaila",
@@ -22,7 +22,7 @@ const object:userObject = {
 
 //same also  for normal function as arrow function
 
-const fuc1 = (a:number,b:number):number =>{
+const fuc2 = (a:number,b:number):number =>{
 
 return a+b
 
@@ -31,9 +31,9 @@ return a+b
 
 //async await function
 
-const func2 = async ():Promise<string> =>{
+// const func2 = async ():Promise<string> =>{
 
-    return ""
-}
+//     return ""
+// }
 
 
