@@ -10,6 +10,6 @@ const rootElement = ReactDOM.createRoot(htmlRoot);
 //jsx
 rootElement.render(
   <React.StrictMode>
-    <LandingPage />
+    <LandingPage name="Pradip Sapkota" email="pradip57@gmail.com" address="Sitapaila" />
   </React.StrictMode>
 );
