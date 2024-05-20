@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 
 import styles from "./landing.page.module.css";
 import "./landing.page.css";
@@ -19,6 +19,23 @@ const LandingPage = ({
   email,
   address,
 }: LandingPagePropsType): ReactNode => {
+  //state maintain
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    console.log("I am always called if second argument is not send");
+  });
+
+  useEffect(() => {
+    console.log("I am only called during loading of components");
+  }, []);
+
+  useEffect(() => {
+    console.log(
+      "I am only called when product state or name props get changed"
+    );
+  }, [products, name]);
+
   return (
     <React.Fragment>
       <p
