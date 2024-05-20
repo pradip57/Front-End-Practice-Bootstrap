@@ -20,21 +20,26 @@ const LandingPage = ({
   address,
 }: LandingPagePropsType): ReactNode => {
   //state maintain
-  const [products, setProducts] = useState([]);
+  // let [products, setProducts] = useState([]);
+  // let [loading, setLoading] = useState();
 
-  useEffect(() => {
-    console.log("I am always called if second argument is not send");
-  });
+  // useEffect(() => {
+  //   console.log("I am always called if second argument is not send");
+  // });
 
-  useEffect(() => {
-    console.log("I am only called during loading of components");
-  }, []);
+  // useEffect(() => {
+  //   console.log("I am only called during loading of components");
+  //   setTimeout(() => {
+  //     setProducts([{}]);
+  //     // setLoading(true)
+  //   }, 3000);
+  // }, []);
 
-  useEffect(() => {
-    console.log(
-      "I am only called when product state or name props get changed"
-    );
-  }, [products, name]);
+  // useEffect(() => {
+  //   console.log(
+  //     "I am only called when product state or name props get changed"
+  //   );
+  // }, [products, name]);
 
   return (
     <React.Fragment>
