@@ -1,7 +1,16 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import myImage from "../../assets/myimg.jpg";
 
 const TailwindPracticePage = (): ReactNode => {
+  let [userMenu, setUserMenu] = useState(true);
+
+  const showUserMenu = (e: any) => {
+    
+    e.preventDefault();
+    userMenu = !userMenu;
+    setUserMenu(userMenu);
+  };
+
   return (
     <>
       <nav className="bg-cyan-700 h-16 md:h-16">
@@ -112,6 +121,7 @@ const TailwindPracticePage = (): ReactNode => {
               <div className="relative ml-3">
                 <div>
                   <button
+                    onClick={showUserMenu}
                     type="button"
                     className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     id="user-menu-button"
@@ -129,7 +139,9 @@ const TailwindPracticePage = (): ReactNode => {
                 </div>
 
                 <div
-                  className="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className={`${
+                    userMenu ? "hidden" : ""
+                  } absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"
@@ -200,7 +212,7 @@ const TailwindPracticePage = (): ReactNode => {
       </nav>
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
+        {/* <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
         >
@@ -211,7 +223,7 @@ const TailwindPracticePage = (): ReactNode => {
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
           ></div>
-        </div>
+        </div> */}
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-16">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -228,8 +240,8 @@ const TailwindPracticePage = (): ReactNode => {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo.  sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              lorem cupidatat commodo. sunt amet fugiat veniam occaecat fugiat
+              aliqua.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a

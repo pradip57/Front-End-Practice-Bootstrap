@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode ,useEffect, useState } from "react";
 
 import styles from "./landing.page.module.css";
 import "./landing.page.css";
